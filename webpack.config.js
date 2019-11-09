@@ -1,15 +1,13 @@
 const path = require("path");
 const webpack = require("webpack");
-const uglify = require("uglifyjs-webpack-plugin");
  
 module.exports = {
-    devtool: 'source-map',
     entry:'./src/lib/mytoast.js',
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath:'/dist/',
         filename: 'my-toast.js',
-        library:'myToast',
+        library:'mytoast',
         libraryTarget:'umd',
         umdNamedDefine: true,
     },

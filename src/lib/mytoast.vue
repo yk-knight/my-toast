@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:'mytoast',
+    name:'my-toast',
     data(){
         return{
             showmsg:this.isShow

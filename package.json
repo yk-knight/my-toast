@@ -1,15 +1,15 @@
 {
-  "name": "plugin-test",
-  "version": "1.0.1",
+  "name": "@ericyao/my-toast",
+  "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "eric.yao <839169653@qq.com>",
-  "main":"dist/my-toast.js",
+  "main": "dist/my-toast.js",
   "private": false,
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/yk-knight/my-toast"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yk-knight/my-toast"
   },
-  "keywords":[
+  "keywords": [
     "vue",
     "mytest"
   ],

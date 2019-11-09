@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("myToast", [], factory);
+		define("mytoast", [], factory);
 	else if(typeof exports === 'object')
-		exports["myToast"] = factory();
+		exports["mytoast"] = factory();
 	else
-		root["myToast"] = factory();
+		root["mytoast"] = factory();
 })(typeof self !== 'undefined' ? self : this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -86,7 +86,7 @@ return /******/ (function(modules) { // webpackBootstrap
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'mytoast',
+    name: 'my-toast',
     data: function data() {
         return {
             showmsg: this.isShow
@@ -212,13 +212,13 @@ var content = __webpack_require__(4);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(6)("54defd76", content, false, {});
+var update = __webpack_require__(6)("97a07a3a", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d90cd2b0\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./mytoast.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d90cd2b0\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./mytoast.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d90cd2b0\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./mytoast.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d90cd2b0\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./mytoast.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -231,12 +231,12 @@ if(false) {
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(5)(true);
+exports = module.exports = __webpack_require__(5)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n.vue-toast-wraper[data-v-d90cd2b0]{\n    background: rgba(0, 0, 0, 0.6);\n    color: #fff;\n    font-size: 17px;\n    padding: 10px;\n    border-radius:12px;\n    display: -webkit-box;\n    -webkit-box-pack: center;\n    -webkit-box-align: center;\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    z-index: 2000;\n    -webkit-transform: translateY(-50%);\n    transform: translateY(-50%);\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n", "", {"version":3,"sources":["F:/myRoom/vue_plugin/pluginTest/src/lib/src/lib/mytoast.vue"],"names":[],"mappings":";AAgDA;IACA,+BAAA;IACA,YAAA;IACA,gBAAA;IACA,cAAA;IACA,mBAAA;IACA,qBAAA;IACA,yBAAA;IACA,0BAAA;IACA,gBAAA;IACA,SAAA;IACA,UAAA;IACA,cAAA;IACA,oCAAA;IACA,4BAAA;IACA,oCAAA;IACA,4BAAA;CACA","file":"mytoast.vue","sourcesContent":["<template>\r\n    <div class=\"vue-toast-wraper\" v-show=\"showmsg\">\r\n        {{msg.name}}:{{msg.speak}}\r\n    </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n    name:'mytoast',\r\n    data(){\r\n        return{\r\n            showmsg:this.isShow\r\n        }\r\n        \r\n    },\r\n    props:{\r\n        msg:{\r\n            type:Object,\r\n            default:function() {\r\n                return {\r\n                    name:\"\",\r\n                    speak:\"\"\r\n                }\r\n            }\r\n        },\r\n        isShow:{\r\n            type:Boolean,\r\n            default:false\r\n        }\r\n    },\r\n    computed:{\r\n        cutMsg:function(show) {\r\n            return this.isShow\r\n                \r\n            \r\n        }\r\n    },\r\n    mounted() {\r\n        if(this.isShow){\r\n            setTimeout(() => {\r\n                this.showmsg = false\r\n            },2500);\r\n        }\r\n    }\r\n}\r\n</script>\r\n\r\n<style scoped>\r\n    .vue-toast-wraper{\r\n        background: rgba(0, 0, 0, 0.6);\r\n        color: #fff;\r\n        font-size: 17px;\r\n        padding: 10px;\r\n        border-radius:12px;\r\n        display: -webkit-box;\r\n        -webkit-box-pack: center;\r\n        -webkit-box-align: center;\r\n        position: fixed;\r\n        top: 50%;\r\n        left: 50%;\r\n        z-index: 2000;\r\n        -webkit-transform: translateY(-50%);\r\n        transform: translateY(-50%);\r\n        -webkit-transform: translateX(-50%);\r\n        transform: translateX(-50%);\r\n    }\r\n</style>"],"sourceRoot":""}]);
+exports.push([module.i, "\n.vue-toast-wraper[data-v-d90cd2b0]{\n    background: rgba(0, 0, 0, 0.6);\n    color: #fff;\n    font-size: 17px;\n    padding: 10px;\n    border-radius:12px;\n    display: -webkit-box;\n    -webkit-box-pack: center;\n    -webkit-box-align: center;\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    z-index: 2000;\n    -webkit-transform: translateY(-50%);\n    transform: translateY(-50%);\n    -webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n", ""]);
 
 // exports
 
@@ -736,4 +736,3 @@ if (false) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=my-toast.js.map
